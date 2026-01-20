@@ -1,115 +1,136 @@
-# 🌌 ChatPort - AI Teleporter
+<div align="center">
+  <img src="public/icons/icon128.png" alt="ChatPort Logo" width="80" height="80" />
+  <h1>ChatPort - AI Teleporter</h1>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?logo=google-chrome&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/)
-[![Built With Vite](https://img.shields.io/badge/Built%20With-Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  <p>
+    <strong>The Ultimate Bridge Between Large Language Models</strong>
+  </p>
 
-> **[🇹🇷 Türkçe README için tıklayın](./README.tr.md)**
+  <p>
+    <a href="./README.tr.md">🇹🇷 Türkçe Dokümantasyon</a> |
+    <a href="./README.md">🇺🇸 English Documentation</a>
+  </p>
 
-**ChatPort** is a powerful Chrome extension that allows you to seamlessly **teleport your chat sessions** between different AI platforms like **ChatGPT**, **Gemini**, and **Claude**.
-
-Don't lose your context when switching models. Carry your conversation history, persona, and ongoing tasks with you, instantly.
-
-![ChatPort Preview](public/icons/icon128.png) *<!-- Replace with a real screenshot if available -->*
-
----
-
-## ✨ Features
-
-### 🚀 Seamless Teleportation
-- Transfer active chat history from **ChatGPT**, **Gemini**, or **Claude** to any other supported platform.
-- Moving from a "Creative" model to a "Logical" model? Take the whole context with you.
-
-### 🧠 Smart Context Injection
-- Automatically generates a **"System Prompt"** header that explains the context to the target AI.
-- Ensures the target AI understands it's continuing a previous conversation.
-
-### 🛡️ Smart Scraping & Ghost Filtering
-- **SPA Awareness:** Intelligently filters out "ghost" messages from previous sessions that are hidden in the DOM (Single Page Application issues).
-- **Gemini v4 Support:** Advanced selectors to correctly parse complex, multi-paragraph messages in Google Gemini's Angular-based DOM.
-
-### ⚡ Productivity Tools
-- **Auto-Send:** Option to automatically submit the teleported context upon arrival.
-- **Selective Transfer:** Choose specific messages to transfer or teleport the entire session.
-
-### 🎨 Premium Experience
-- **Organic Glassmorphism Design:** A beautiful "Sand & Stone" aesthetic interface.
-- **Multilingual:** Full support for **English** and **Turkish**, with dynamic prompt generation based on your selected language.
+  <p>
+    <a href="https://opensource.org/licenses/MIT">
+      <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
+    </a>
+    <a href="https://developer.chrome.com/docs/extensions/mv3/">
+      <img src="https://img.shields.io/badge/Chrome-Extension-Manifest_V3-4285F4?logo=google-chrome&logoColor=white" alt="Chrome Extension" />
+    </a>
+    <a href="https://www.typescriptlang.org/">
+      <img src="https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white" alt="TypeScript" />
+    </a>
+    <a href="https://reactjs.org/">
+      <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black" alt="React" />
+    </a>
+    <a href="https://vitejs.dev/">
+      <img src="https://img.shields.io/badge/Build-Vite-646CFF?logo=vite&logoColor=white" alt="Vite" />
+    </a>
+  </p>
+</div>
 
 ---
 
-## 🌍 Supported Platforms
+## 🌌 Overview
 
-| Platform | Source (Read) | Target (Write) |
-|----------|:-------------:|:--------------:|
-| **ChatGPT** | ✅ | ✅ |
-| **Gemini** | ✅ | ✅ |
-| **Claude** | ✅ | ✅ |
+**ChatPort** is a cutting-edge Chrome extension designed for power users, developers, and AI enthusiasts who work with multiple Large Language Models (LLMs). It solves the fragmentation problem by allowing you to **teleport your active chat sessions** instantly between **ChatGPT**, **Gemini**, and **Claude**.
+
+Stop manual copy-pasting. Stop losing context. ChatPort intelligently scrapes, formats, and injects your conversation history into a new model, preserving the persona and state of your workflow.
 
 ---
 
-## 🛠️ Installation
+## ✨ Key Features
 
-### For Developers (Build from Source)
+### 🚀 Seamless Teleportation (All-to-All)
+Transfer your workspace to any supported platform instantly.
+*   **ChatGPT** ↔ **Gemini** ↔ **Claude**
+*   Full bi-directional support. Start in Gemini, move to Claude for coding, finish in ChatGPT for documentation.
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/yourusername/chatport-extension.git
-    cd chatport-extension
-    ```
+### 🧠 Intelligent Context Injection
+ChatPort doesn't just paste text; it reconstructs the context.
+*   **System Prompt Generation:** Automatically prefixes the transferred chat with a system instruction, informing the target AI that it is continuing an existing conversation.
+*   **Persona Preservation:** Ensures the target AI adheres to the rules and tone established in the original chat.
 
-2.  **Install Dependencies**
-    ```bash
-    npm install
-    ```
+### 🛡️ Advanced Scraping Engine
+Built to handle the complexity of modern Single Page Applications (SPAs).
+*   **Ghost Message Filtering:** Uses an `isVisible` heuristic to ignore hidden DOM elements, ensuring you don't transfer old or deleted messages from the browser's memory.
+*   **Gemini v4 Support:** Validated against Google Gemini's latest Angular/Shadow DOM updates. Correctly parses multi-paragraph and nested user queries that standard scrapers miss.
 
-3.  **Build the Extension**
-    ```bash
-    npm run build
-    ```
-
-4.  **Load into Chrome**
-    - Open `chrome://extensions/`
-    - Enable **Developer mode** (top right toggle).
-    - Click **"Load unpacked"**.
-    - Select the `dist` folder generated in your project directory.
+### ⚡ Productivity & UX
+*   **Auto-Send Integration:** Optionally submit the teleported context immediately upon page load.
+*   **Selective Transfer:** Choose specifically which parts of the conversation to move.
+*   **Organic Glassmorphism UI:** A premium "Sand & Stone" aesthetic that feels native yet distinct.
 
 ---
 
-## 📖 Usage
+## 🏗️ Architecture
 
-1.  Open a chat on any supported platform (e.g., ChatGPT).
-2.  Click the **ChatPort (C)** icon in your browser toolbar.
-3.  Wait for the extension to analyze and capture the chat stream.
-4.  Select the **Destination AI** (e.g., Gemini).
-5.  Click **"TELEPORT"**.
-6.  A new tab will open, and your conversation will be pasted and (optionally) sent automatically.
+ChatPort is built on **Manifest V3**, ensuring long-term compatibility with Chrome's security standards.
+
+*   **Content Scripts:** Injected into AI tabs to safely scrape DOM elements using highly specific selectors.
+*   **Background Service Worker:** Orchestrates the "Teleportation" logic, handling tab creation and secure message passing.
+*   **Storage API:** Persists user preferences (like Auto-Send) and temporary chat buffers locally.
 
 ---
 
-## ⚙️ Tech Stack
+## 🚀 Installation & Usage
 
--   **Frontend:** React 18, TailwindCSS, Framer Motion
--   **Build Tool:** Vite + CRXJS (HMR support for extensions)
--   **Language:** TypeScript
--   **Architecture:** Manifest V3 (Service Workers)
+### Option 1: Quick Install (Recommended)
+1.  Download `ChatPort-v1.0.zip` from the **[Releases](../../releases)** section.
+2.  Extract the zip file to a folder.
+3.  Open Chrome and navigate to `chrome://extensions/`.
+4.  Toggle **Developer mode** (top right).
+5.  Click **Load unpacked** and select the extracted folder.
+
+### Option 2: Build from Source
+Perfect for developers who want to contribute.
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/ozymandias-get/chatport-chrome-extension.git
+
+# 2. Install dependencies
+npm install
+
+# 3. Build the project
+npm run build
+# The 'dist' folder will be generated.
+```
+
+### Usage Workflow
+1.  **Open an AI Chat:** Navigate to ChatGPT, Gemini, or Claude.
+2.  **Activate ChatPort:** Click the extension icon (or press the shortcut).
+3.  **Analyze:** The popup will show the number of messages detected.
+4.  **Select Destination:** Choose where you want to go (e.g., "Gemini").
+5.  **Teleport:** Click the button. A new tab opens with your context pre-filled.
+
+---
+
+## ❓ FAQ
+
+**Q: Does ChatPort save my data?**
+A: **No.** ChatPort functions entirely locally within your browser. No chat data is ever sent to an external server.
+
+**Q: Why does it need "Access to all data" on AI sites?**
+A: The extension requires permission to read the DOM of `chatgpt.com`, `gemini.google.com`, and `claude.ai` to scrape the text you want to transfer. It does not access any other sites.
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1.  Fork the project
-2.  Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+We welcome contributions!
+1.  Fork the repo.
+2.  Create a feature branch (`git checkout -b feature/NewMagic`).
+3.  Commit your changes.
+4.  Push to the branch and open a Pull Request.
 
 ---
 
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+<div align="center">
+  <sub>Designed & Built by the ChatPort Team</sub>
+</div>

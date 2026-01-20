@@ -1,115 +1,133 @@
-# 🌌 ChatPort - AI Işınlayıcı
+<div align="center">
+  <img src="public/icons/icon128.png" alt="ChatPort Logo" width="80" height="80" />
+  <h1>ChatPort - AI Teleporter</h1>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?logo=google-chrome&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/)
-[![Built With Vite](https://img.shields.io/badge/Built%20With-Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  <p>
+    <strong>Büyük Dil Modelleri Arasında Kesintisiz Köprü</strong>
+  </p>
 
-> **[🇺🇸 Click here for English README](./README.md)**
+  <p>
+    <a href="./README.tr.md">🇹🇷 Türkçe Dokümantasyon</a> |
+    <a href="./README.md">🇺🇸 English Documentation</a>
+  </p>
 
-**ChatPort**, sohbet oturumlarınızı **ChatGPT**, **Gemini** ve **Claude** gibi farklı yapay zeka platformları arasında **ışınlamanızı** sağlayan güçlü bir Chrome eklentisidir.
-
-Model değiştirirken bağlamınızı kaybetmeyin. Sohbet geçmişinizi, oluşturduğunuz kişiliği (persona) ve devam eden görevlerinizi yanınızda taşıyın.
-
-![ChatPort Önizleme](public/icons/icon128.png) *<!-- Ekran görüntüsü eklenebilir -->*
+  <p>
+    <a href="https://opensource.org/licenses/MIT">
+      <img src="https://img.shields.io/badge/Lisans-MIT-yellow.svg" alt="License: MIT" />
+    </a>
+    <a href="https://developer.chrome.com/docs/extensions/mv3/">
+      <img src="https://img.shields.io/badge/Chrome_Eklentisi-Manifest_V3-4285F4?logo=google-chrome&logoColor=white" alt="Chrome Extension" />
+    </a>
+    <a href="https://www.typescriptlang.org/">
+      <img src="https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&logoColor=white" alt="TypeScript" />
+    </a>
+    <a href="https://reactjs.org/">
+      <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black" alt="React" />
+    </a>
+  </p>
+</div>
 
 ---
 
-## ✨ Özellikler
+## 🌌 Genel Bakış
 
-### 🚀 Kesintisiz Işınlanma (Teleportation)
-- Aktif sohbet geçmişini **ChatGPT**, **Gemini** veya **Claude**'dan alıp desteklenen diğer herhangi bir platforma aktarın.
-- "Yaratıcı" bir modelden "Mantıksal" bir modele mi geçmek istiyorsunuz? Tüm bağlamı yanınıza alın.
+**ChatPort**, birden fazla Yapay Zeka modeliyle (LLM) çalışan profesyonel kullanıcılar, geliştiriciler ve araştırmacılar için tasarlanmış gelişmiş bir Chrome eklentisidir. **ChatGPT**, **Gemini** ve **Claude** arasındaki duvarları yıkarak, aktif sohbet oturumlarınızı **anında başka bir platforma ışınlamanızı** sağlar.
+
+Manuel kopyala-yapıştır yapmaktan kurtulun. Bağlamı kaybetmeyin. ChatPort, sohbet geçmişinizi akıllıca tarar, formatlar ve yeni modele "kişiliğini" ve "hafızasını" koruyarak enjekte eder.
+
+---
+
+## ✨ Temel Özellikler
+
+### 🚀 Kesintisiz Işınlanma (Her Yöne)
+Çalışma alanınızı dilediğiniz platforma taşıyın.
+*   **ChatGPT** ↔ **Gemini** ↔ **Claude**
+*   **Sınırsız Özgürlük:** Gemini'de araştırmaya başlayın, kod yazmak için Claude'a geçin ve dokümantasyon için ChatGPT'de bitirin.
 
 ### 🧠 Akıllı Bağlam Enjeksiyonu
-- Hedef yapay zekaya durumu açıklayan özel bir **"Sistem İstemi" (System Prompt)** başlığı ekler.
-- Hedef yapay zekanın, konuşmanın sıfırdan başlamadığını, bir devamlılık olduğunu anlamasını sağlar.
+ChatPort sadece metni yapıştırmaz; bağlamı yeniden inşa eder.
+*   **Sistem İstemi (System Prompt):** Aktarılan sohbete otomatik olarak bir "Üst Bilgi" ekler. Bu sayede hedef yapay zeka, konuşmanın sıfırdan başlamadığını, devam eden bir süreç olduğunu anlar.
+*   **Persona Koruma:** Orijinal sohbette belirlediğiniz kuralların ve tonun (persona) hedef modelde de devam etmesini sağlar.
 
-### 🛡️ Akıllı Tarama & Hayalet Filtreleme
-- **SPA Farkındalığı:** Tek Sayfalı Uygulamalarda (SPA) DOM içinde gizli kalan eski sohbet kalıntılarını ("hayalet mesajları") akıllıca filtreler. Sadece gördüğünüzü kopyalar.
-- **Gemini v4 Desteği:** Google Gemini'nin karmaşık, Angular tabanlı yapısındaki çok paragraflı mesajları doğru şekilde ayrıştıran gelişmiş seçicilere sahiptir.
+### 🛡️ Gelişmiş Tarama Motoru
+Modern Tek Sayfalı Uygulamaların (SPA) karmaşıklığı için özel olarak üretildi.
+*   **Hayalet Mesaj Filtresi (Ghost Filtering):** Sayfa geçişlerinde DOM'da gizli kalan eski mesajları (`isVisible` kontrolü ile) eler. Sadece o an gördüğünüz taze veriyi transfer eder.
+*   **Gemini v4 Desteği:** Google Gemini'nin en son Angular/Shadow DOM yapısına tam uyumludur. Standart araçların kaçırdığı çok paragraflı veya iç içe geçmiş kullanıcı sorgularını eksiksiz yakalar.
 
-### ⚡ Verimlilik Araçları
-- **Otomatik Gönder (Auto-Send):** Işınlama sonrası mesajı otomatik olarak gönderme seçeneği.
-- **Seçmeli Transfer:** İsterseniz tüm sohbeti, isterseniz sadece seçtiğiniz kritik mesajları aktarın.
-
-### 🎨 Premium Deneyim
-- **Organik Glassmorphism Tasarım:** "Kum ve Taş" ("Sand & Stone") temalı, estetik ve modern arayüz.
-- **Çoklu Dil Desteği:** Tam **Türkçe** ve **İngilizce** desteği. Seçtiğiniz dile göre yapay zekaya verilen talimatlar da (prompt) o dilde oluşturulur.
-
----
-
-## 🌍 Desteklenen Platformlar
-
-| Platform | Kaynak (Okuma) | Hedef (Yazma) |
-|----------|:-------------:|:--------------:|
-| **ChatGPT** | ✅ | ✅ |
-| **Gemini** | ✅ | ✅ |
-| **Claude** | ✅ | ✅ |
+### ⚡ Verimlilik ve Kullanıcı Deneyimi
+*   **Otomatik Gönder (Auto-Send):** Işınlama tamamlandığında mesajı otomatik olarak gönderme seçeneği.
+*   **Seçmeli Transfer:** Sohbetin tamamını değil, sadece istediğiniz kısmını taşıma imkanı.
+*   **Organik Glassmorphism Arayüz:** "Kum ve Taş" (Sand & Stone) temalı, göz yormayan, modern ve şık tasarım.
 
 ---
 
-## 🛠️ Kurulum
+## 🏗️ Mimari ve Teknoloji
 
-### Geliştiriciler İçin (Kaynak Koddan Derleme)
+ChatPort, Chrome'un güvenlik standartlarına tam uyumlu **Manifest V3** üzerinde inşa edilmiştir.
 
-1.  **Depoyu klonlayın**
-    ```bash
-    git clone https://github.com/kullaniciadiniz/chatport-extension.git
-    cd chatport-extension
-    ```
-
-2.  **Bağımlılıkları Yükleyin**
-    ```bash
-    npm install
-    ```
-
-3.  **Eklentiyi Derleyin**
-    ```bash
-    npm run build
-    ```
-
-4.  **Chrome'a Yükleyin**
-    - Tarayıcıda `chrome://extensions/` adresine gidin.
-    - Sağ üstteki **Geliştirici modu (Developer mode)** anahtarını açın.
-    - **"Paketlenmemiş öğe yükle" (Load unpacked)** butonuna tıklayın.
-    - Proje klasörünüzdeki oluşturulan `dist` klasörünü seçin.
+*   **Content Scripts:** Yapay zeka sekmelerine enjekte edilerek DOM elementlerini cerrahi hassasiyetle okur.
+*   **Background Service Worker:** "Işınlanma" lojiğini yönetir, sekmeler arası güvenli mesajlaşmayı ve veri taşımayı sağlar.
+*   **Güvenlik:** Hiçbir veri dış sunucuya gönderilmez. Tüm işlemler tarayıcınızın yerel belleğinde gerçekleşir.
 
 ---
 
-## 📖 Kullanım
+## 🚀 Kurulum ve Kullanım
 
-1.  Desteklenen herhangi bir platformda (örn. ChatGPT) bir sohbet açın.
-2.  Tarayıcı araç çubuğundaki **ChatPort (C)** ikonuna tıklayın.
-3.  Eklentinin sohbet akışını analiz etmesini bekleyin.
-4.  **Hedef Yapay Zeka'yı (Destination)** seçin (örn. Gemini).
-5.  **"IŞINLA" (TELEPORT)** butonuna basın.
-6.  Yeni bir sekme açılacak ve sohbetiniz yapıştırılıp (ayara bağlı olarak) gönderilecektir.
+### Seçenek 1: Hızlı Kurulum (Önerilen)
+1.  **[Releases](../../releases)** kısmından `ChatPort-v1.0.zip` dosyasını indirin.
+2.  Zip dosyasını bir klasöre çıkartın.
+3.  Chrome'da `chrome://extensions/` adresine gidin.
+4.  Sağ üstteki **Geliştirici modu (Developer mode)** anahtarını açın.
+5.  **Paketlenmemiş öğe yükle (Load unpacked)** butonuna basın ve klasörü seçin.
+
+### Seçenek 2: Kaynak Koddan Derleme
+Projeye katkıda bulunmak isteyen geliştiriciler için.
+
+```bash
+# 1. Depoyu klonlayın
+git clone https://github.com/ozymandias-get/chatport-chrome-extension.git
+
+# 2. Bağımlılıkları yükleyin
+npm install
+
+# 3. Projeyi derleyin
+npm run build
+# 'dist' klasörü oluşacaktır.
+```
+
+### Kullanım Senaryosu
+1.  **Sohbeti Açın:** ChatGPT, Gemini veya Claude üzerinde bir konuşma başlatın veya açın.
+2.  **ChatPort'u Açın:** Tarayıcıdaki eklenti ikonuna tıklayın.
+3.  **Analiz:** Eklenti kaç mesajın aktarılacağını size gösterir.
+4.  **Hedef Seçin:** Gitmek istediğiniz Yapay Zekayı seçin (örn. "Gemini").
+5.  **Işınlayın:** Butona basın. Yeni sekme açılır ve sohbetiniz kaldığı yerden devam eder.
 
 ---
 
-## ⚙️ Teknoloji Yığını
+## ❓ Sıkça Sorulan Sorular (SSS)
 
--   **Frontend:** React 18, TailwindCSS, Framer Motion
--   **Build Tool:** Vite + CRXJS (HMR destekli)
--   **Dil:** TypeScript
--   **Mimari:** Manifest V3 (Service Workers)
+**S: ChatPort verilerimi kaydeder mi?**
+C: **Hayır.** ChatPort tamamen cihazınızda (yerel) çalışır. Sohbet verileriniz hiçbir sunucuya gönderilmez veya saklanmaz.
+
+**S: Neden "Tüm verilere erişim" izni istiyor?**
+C: Eklenti, sadece desteklenen siteler (`chatgpt.com`, `gemini.google.com`, `claude.ai`) üzerinde çalışır. "Tüm veriler" uyarısı, Chrome'un o sayfadaki metni (sohbetinizi) okuyabilmemiz için gösterdiği standart bir izindir. Diğer sitelere erişmez.
 
 ---
 
 ## 🤝 Katkıda Bulunma
 
-Katkılarınızı bekliyoruz! Lütfen bir Pull Request göndermekten çekinmeyin.
-
-1.  Projeyi Fork'layın
-2.  Özellik dalınızı oluşturun (`git checkout -b feature/HarikaOzellik`)
-3.  Değişikliklerinizi commit'leyin (`git commit -m 'HarikaOzellik eklendi'`)
-4.  Dalınıza Push yapın (`git push origin feature/HarikaOzellik`)
-5.  Bir Pull Request açın
+Açık kaynağa destek veriyoruz! Katkıda bulunmak isterseniz:
+1.  Repoyu Fork'layın.
+2.  Yeni bir özellik dalı (branch) oluşturun.
+3.  Değişikliklerinizi gönderin (Push).
+4.  Bir Pull Request (PR) açın.
 
 ---
 
 ## 📄 Lisans
 
-MIT Lisansı altında dağıtılmaktadır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
+Bu proje MIT Lisansı ile lisanslanmıştır. Detaylar için `LICENSE` dosyasına bakabilirsiniz.
+
+<div align="center">
+  <sub>ChatPort Ekibi tarafından ❤️ ile tasarlandı</sub>
+</div>
