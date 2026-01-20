@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass-panel {
+    @apply backdrop-blur-xl border border-stone-700/20 shadow-glass rounded-3xl bg-transparent;
+    background: linear-gradient(145deg, rgba(28, 25, 23, 0.90) 0%, rgba(12, 10, 9, 0.98) 100%);
+  }
+}
+
+body {
+  @apply bg-stone-950 text-stone-50 font-sans selection:bg-sand-500/20 selection:text-sand-500;
+  margin: 0;
+  width: 400px; /* Chrome extension popup width */
+  height: 600px;
+  overflow: hidden;
+}
+
+/* Custom Scrollbar for Component B */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-stone-800 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-stone-700;
+}
